@@ -1,0 +1,14 @@
+#include <stdio.h> 
+
+int main() {
+	
+	int panjang = 15, lebar = 8, luas, keliling;
+	
+	luas = panjang * lebar;
+	keliling = 2 * (panjang + lebar);
+	
+	printf("Luas 		= %d\n", luas);
+	printf("Keliling 	= %d\n", keliling);
+	
+	return 0;
+}
