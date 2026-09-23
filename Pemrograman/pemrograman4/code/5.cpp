@@ -4,10 +4,11 @@
 int main() {
 
     int pilihan;
+
     float panjang, lebar, alas, tinggi, sisi;
     float keliling, luas, jari2;
 
-    printf("===================================\n");
+    printf("\n===================================\n");
     printf("| Menu :                          |\n");
     printf("| 1. Persegi                      |\n");
     printf("| 2. Persegi Panjang              |\n");
@@ -55,23 +56,35 @@ int main() {
             printf("Masukkan tinggi = ");
             scanf("%f", &tinggi);
 
-            keliling = 3 * sisi;
-            luas = 0.5 * alas * tinggi;
+            if (sisi > 0 && alas > 0 && tinggi > 0) {
+                keliling = 3 * sisi;
+                luas = 0.5 * alas * tinggi;
 
-            printf("Keliling segitiga = %.2f\n", keliling);
-            printf("Luas segitiga = %.2f\n", luas);
+                printf("Keliling segitiga = %.2f\n", keliling);
+                printf("Luas segitiga = %.2f\n", luas);
+            }
+            else if (sisi == 0 || alas == 0 || tinggi == 0) {
+                printf("Nilai tidak boleh 0!\n");
+            }
+            else {
+                printf("Nilai tidak boleh negatif!\n");
+            }
             break;
-    }
 
-    if (pilihan == 4) {
-        printf("Masukkan jari-jari = ");
-        scanf("%f", &jari2);
+        case 4:
+            printf("Masukkan jari-jari = ");
+            scanf("%f", &jari2);
 
-        keliling = 2 * PI * jari2;
-        luas = PI * jari2 * jari2;
+            keliling = 2 * PI * jari2;
+            luas = PI * jari2 * jari2;
 
-        printf("Keliling lingkaran = %.2f\n", keliling);
-        printf("Luas lingkaran = %.2f\n", luas);
+            printf("Keliling lingkaran = %.2f\n", keliling);
+            printf("Luas lingkaran = %.2f\n", luas);
+            break;
+
+        default:
+            printf("Pilihan tidak tersedia\n");
+            break;
     }
 
     return 0;
