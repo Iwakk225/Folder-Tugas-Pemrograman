@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+
+    int n, i, jumlah = 0;
+
+    printf("Masukkan n = ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        jumlah += i;
+    }
+
+    printf("Jumlah triangular 1 sampai %d = %d\n", n, jumlah);
+
+    return 0;
+}
