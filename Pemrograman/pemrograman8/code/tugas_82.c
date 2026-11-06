@@ -11,7 +11,6 @@ int main()
     fgets(k, sizeof k, stdin);
     k[strcspn(k, "\n")] = '\0';
 
-    /* ambil hanya huruf/angka, ubah ke huruf kecil */
     for (i = 0; k[i]; i++)
         if (isalnum((unsigned char)k[i]))
             b[j++] = tolower((unsigned char)k[i]);
